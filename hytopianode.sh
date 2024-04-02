@@ -19,8 +19,6 @@ sudo apt update && upgrade -y
 echo  -e  "\e[1;33m================================INSTALANDO DOCKER===============================================================\e[0m"
 sleep 7s
 echo  -e  "\e[1;33m================================INSTALACAO COM SUCESSO==========================================================\e[0m"
-
-screen -S HytopiaNodes 
 sudo apt-get install curl -y
 curl -L -o https://github.com/HYCHAIN/guardian-node-software/blob/main/cli/linux/guardian-cli-linux
 unzip guardian-cli-linux.zip
