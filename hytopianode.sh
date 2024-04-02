@@ -20,13 +20,9 @@ echo  -e  "\e[1;33m================================INSTALANDO PACOTES===========
 sleep 7s
 echo  -e  "\e[1;33m================================INSTALACAO COM SUCESSO==========================================================\e[0m"
 sudo apt-get install curl -y
+sudo apt-get install wget
 sudo apt install unzip
-curl -L https://github.com/HYCHAIN/guardian-node-software/blob/main/cli/linux/guardian-cli-linux -o guardian-clo-linux.zip
-unzip guardian-cli-linux.zip
-echo -n "Enter with your private key: "
-read -s private_key
-echo  -e  "\e[1;34m================================RODANDO O NODE=========================================\e[0m"
-./guardian-cli-linux guardian run "$private_key" --loop-interval-ms 3600000
-sleep 5s
-echo  -e  "\e[1;33m============================INSTALACAO COMPLETA=======================================\e[0m"
-
+mkdir hychain
+cd hychain
+wget https://github.com/HYCHAIN/guardian-node-software/archive/refs/heads/main.zip
+unzip main.zip
